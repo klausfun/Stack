@@ -1,8 +1,17 @@
-//
-// Created by artem on 17.02.24.
-//
+#pragma once
+#include <iostream>
+#include <functional>
+#include <stdexcept>
 
-#ifndef STACKPROJECT_TESTSYSTEM_H
-#define STACKPROJECT_TESTSYSTEM_H
+namespace TestSystem
+{
+    enum TestResult
+    {
+        FAIL,
+        OK,
+        EXCEPTION,
+        ERROR
+    };
 
-#endif //STACKPROJECT_TESTSYSTEM_H
+    TestResult run_test(const char* name, std::function<bool()> test);
+}
