@@ -1,0 +1,22 @@
+BEGIN
+    PUSH 1
+    OUT
+    PUSH 1
+    OUT
+    PUSH 2
+    OUT
+    PUSH 3
+    OUT
+    PUSH 5
+    OUT
+    PUSH 8
+    OUT
+    PUSH 13
+    OUT
+    PUSH 21
+    OUT
+    PUSH 34
+    OUT
+    PUSH 55
+    OUT
+END
