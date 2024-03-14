@@ -230,6 +230,25 @@ bool test_push()
 }
 
 template<typename T>
+bool test_push2()
+{
+    Stack<T> stack;
+    T value;
+    if constexpr (std::is_same_v<T, int>)
+    {
+        value = 42;
+    }
+    else if constexpr (std::is_same_v<T, double>)
+    {
+        value = 42;
+    }
+
+    stack.push(42);
+
+    return stack.top() == value;
+}
+
+template<typename T>
 bool test_pop()
 {
     Stack<T> stack;

@@ -1,9 +1,9 @@
-#include <iostream>
-#include "../include/emulator.hpp"
-
-int main() {
-    Emulator emulator("program.txt");
-    emulator.run();
-
-    return 0;
-}
+//#include <iostream>
+//#include "../include/Stack.hpp"
+//#include <cassert>
+//
+//int main()
+//{
+//
+//    return 0;
+//}
