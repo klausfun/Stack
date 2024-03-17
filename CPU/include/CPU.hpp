@@ -1,6 +1,6 @@
 #pragma once
-#include "Stack.hpp"
-#include "Command.hpp"
+#include "../../stack/Stack.hpp"
+#include "command.hpp"
 #include <vector>
 
 class CPU {

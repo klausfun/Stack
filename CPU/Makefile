@@ -9,7 +9,7 @@ SOURCES = $(wildcard $(SRCDIR)/*.cpp)
 OBJECTS = $(patsubst $(SRCDIR)/%.cpp,$(BUILDDIR)/%.o,$(SOURCES))
 
 # Название исполняемого файла
-EXECUTABLE = main
+EXECUTABLE = cpu_executable
 
 # Цель по умолчанию
 all: $(BUILDDIR)/$(EXECUTABLE)

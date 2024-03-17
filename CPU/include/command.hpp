@@ -1,6 +1,6 @@
 #pragma once
 #include "arch.hpp"
-#include "Stack.hpp"
+#include "../../stack/Stack.hpp"
 
 enum CommandType : Cmd_t {
     NOTHING = 0,

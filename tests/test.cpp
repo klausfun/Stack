@@ -1,5 +1,5 @@
 #include "../include/testSystem.hpp"
-#include "../include/Stack.hpp"
+#include "../stack/Stack.hpp"
 
 template<typename T>
 bool test_copy_constructor()
