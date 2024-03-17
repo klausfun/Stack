@@ -1,28 +1,26 @@
 CC = g++
 CFLAGS = -std=c++17 -Wall -Wextra -Werror
+
 SRCDIR = .
-INCDIR = ../include
+INCDIR = .
 BUILDDIR = build
 
-# Исходные файлы тестов
+INCLUDES = $(wildcard $(INCDIR)/*.hpp)
 SOURCES = $(wildcard $(SRCDIR)/*.cpp)
 OBJECTS = $(patsubst $(SRCDIR)/%.cpp,$(BUILDDIR)/%.o,$(SOURCES))
 
-# Название исполняемого файла тестов
-EXECUTABLE = test
+EXECUTABLE = runTests
 
-# Цель по умолчанию
 all: $(BUILDDIR)/$(EXECUTABLE)
 
-# Сборка исполняемого файла тестов
 $(BUILDDIR)/$(EXECUTABLE): $(OBJECTS)
 	$(CC) $(CFLAGS) $^ -o $@
 
-# Компиляция исходных файлов тестов
-$(BUILDDIR)/%.o: $(SRCDIR)/%.cpp
+$(BUILDDIR)/%.o: $(SRCDIR)/%.cpp $(INCLUDES)
 	@mkdir -p $(BUILDDIR)
-	$(CC) -c $(CFLAGS) -I$(INCDIR) $< -o $@
+	$(CC) -c $(CFLAGS) $< -o $@
 
-# Очистка собранных файлов
 clean:
 	rm -rf $(BUILDDIR)
+
+.PHONY: all clean
