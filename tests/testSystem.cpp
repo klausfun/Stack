@@ -1,4 +1,4 @@
-#include "../include/testSystem.hpp"
+#include "testSystem.hpp"
 
 namespace TestSystem
 {

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/testSystem.hpp"
+#include "testSystem.hpp"
 #include "test.cpp"
 
 int main(void)
