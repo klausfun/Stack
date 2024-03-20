@@ -30,6 +30,7 @@ public:
     ~Stack();
 
     void push(const T& value);
+    void push(T&& value);
     void pop();
     T& top();
     bool empty() const;
@@ -117,6 +118,16 @@ template<typename T>
 void Stack<T>::push(const T& value)
 {
     Node* new_node = new Node(value);
+    new_node->next = top_node;
+    top_node = new_node;
+    ++stack_size;
+}
+
+template<typename T>
+void Stack<T>::push(T&& value)
+{
+
+    Node* new_node = new Node(std::move(value));
     new_node->next = top_node;
     top_node = new_node;
     ++stack_size;

@@ -1,30 +1,18 @@
-#pragma once
+#include <iostream>
 
-#include "iostream"
-#include "Stack.hpp"
-
-
-class Logger
-{
+class Logger {
 public:
-    Logger()  { printf("default constructor"); };
-
-    Logger(const Logger& other) { printf("copy constructor"); };
-    Logger(Logger&& other) noexcept { printf("move constructor"); };
-
-    Logger& operator=(const Logger& other) { printf("copy assignment"); };
-    Logger& operator=(Logger&& other) noexcept { printf("move assignment"); };
-
-    ~Logger() { printf("destructor"); };;
+    Logger() { std::cout << "Default constructor called\n\n"; }
+    Logger(const Logger&) { std::cout << "Copy constructor called\n\n"; }
+    Logger(Logger&&) noexcept { std::cout << "Move constructor called\n\n"; }
+    Logger& operator=(const Logger&) {
+        std::cout << "Copy assignment called\n\n";
+        return *this;
+    }
+    Logger& operator=(Logger&&) noexcept {
+        std::cout << "Move assignment called\n\n";
+        return *this;
+    }
+    ~Logger() { std::cout << "Destructor called\n\n"; }
 };
 
-int main() {
-    Logger l;
-
-    Stack<Logger> s;
-    s.push(l);
-
-
-
-    return 0;
-}
