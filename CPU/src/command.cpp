@@ -1,4 +1,4 @@
-#include "../../include/command.hpp"
+#include "../include/command.hpp"
 #include <iostream>
 
 void CommandBegin::execute(Stack<int>& stack, int& ip) const {

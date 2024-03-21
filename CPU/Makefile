@@ -1,5 +1,5 @@
 CC = g++
-CFLAGS = -std=c++17 -Wall -Wextra -Werror
+CFLAGS = -std=c++17 -Wall -Wextra
 SRCDIR = src
 INCDIR = include
 BUILDDIR = build

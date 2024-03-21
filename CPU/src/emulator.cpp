@@ -1,7 +1,7 @@
-#include "../../include/emulator.hpp"
-#include "../../include/Parser.hpp"
-#include "../../include/command.hpp"
-#include "../../include/CPU.hpp"
+#include "../include/emulator.hpp"
+#include "../include/Parser.hpp"
+#include "../include/command.hpp"
+#include "../include/CPU.hpp"
 
 #include <iostream>
 #include <vector>

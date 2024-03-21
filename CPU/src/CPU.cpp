@@ -1,4 +1,4 @@
-#include "../../include/CPU.hpp"
+#include "../include/CPU.hpp"
 
 CPU::CPU(Stack<int>& stack) : stack_(stack), ip_(0) {}
 

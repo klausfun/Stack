@@ -1,4 +1,4 @@
-#include "../../include/Parser.hpp"
+#include "../include/Parser.hpp"
 #include <iostream>
 
 Parser::Parser(const char* filename) : file_(filename) {
@@ -61,33 +61,34 @@ Command* Parser::parse_command(std::string token) {
         return new CommandOut();
     } else if (token == "IN") {
         return new CommandIn();
-    } else if (token == "JMP") {
-        std::string label = tokens_[1];
-        return new CommandJmp(label);
-    } else if (token == "JEQ") {
-        std::string label = tokens_[1];
-        return new CommandJeq(label);
-    } else if (token == "JNE") {
-        std::string label = tokens_[1];
-        return new CommandJne(label);
-    } else if (token == "JA") {
-        std::string label = tokens_[1];
-        return new CommandJa(label);
-    } else if (token == "JAE") {
-        std::string label = tokens_[1];
-        return new CommandJae(label);
-    } else if (token == "JB") {
-        std::string label = tokens_[1];
-        return new CommandJb(label);
-    } else if (token == "JBE") {
-        std::string label = tokens_[1];
-        return new CommandJbe(label);
-    } else if (token == "CALL") {
-        std::string label = tokens_[1];
-        return new CommandCall(label);
-    } else if (token == "RET") {
-        return new CommandRet();
-    } else {
-        throw std::runtime_error("Unknown command token: " + token);
     }
+//    else if (token == "JMP") {
+//        std::string label = tokens_[1];
+//        return new CommandJmp(label);
+//    } else if (token == "JEQ") {
+//        std::string label = tokens_[1];
+//        return new CommandJeq(label);
+//    } else if (token == "JNE") {
+//        std::string label = tokens_[1];
+//        return new CommandJne(label);
+//    } else if (token == "JA") {
+//        std::string label = tokens_[1];
+//        return new CommandJa(label);
+//    } else if (token == "JAE") {
+//        std::string label = tokens_[1];
+//        return new CommandJae(label);
+//    } else if (token == "JB") {
+//        std::string label = tokens_[1];
+//        return new CommandJb(label);
+//    } else if (token == "JBE") {
+//        std::string label = tokens_[1];
+//        return new CommandJbe(label);
+//    } else if (token == "CALL") {
+//        std::string label = tokens_[1];
+//        return new CommandCall(label);
+//    } else if (token == "RET") {
+//        return new CommandRet();
+//    } else {
+//        throw std::runtime_error("Unknown command token: " + token);
+//    }
 }
